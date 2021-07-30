@@ -38,7 +38,7 @@ const SignUp = ({ history }) => {
   const dispatch = useDispatch();
 
   useScrollTop();
-  useDocumentTitle('Sign Up | Salinaka');
+  useDocumentTitle('Sign Up | SpecShop');
 
   useEffect(
     () => () => {
@@ -81,7 +81,7 @@ const SignUp = ({ history }) => {
             }`}
           >
             <div className="auth-main">
-              <h3>Sign up to Salinaka</h3>
+              <h3>Sign up to SpecShop</h3>
               <Formik
                 initialValues={{
                   fullname: '',
