@@ -69,7 +69,7 @@ const Navigation = () => {
     <nav className="navigation" ref={navbar}>
       <div className="logo">
         <Link onClick={onClickLink} to="/">
-          <h1>SpecShop</h1>
+          <h1>SpecShoppe</h1>
         </Link>
       </div>
       <ul className="navigation-menu-main">

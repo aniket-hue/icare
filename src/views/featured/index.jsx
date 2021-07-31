@@ -9,7 +9,7 @@ import bannerImg from '../../images/banner-guy.png';
 import React from 'react';
 
 const FeaturedProducts = () => {
-  useDocumentTitle('Featured Products | SpecShop');
+  useDocumentTitle('Featured Products | SpecShoppe');
   useScrollTop();
 
   const { featuredProducts, fetchFeaturedProducts, isLoading, error } =

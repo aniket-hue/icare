@@ -128,8 +128,7 @@ function* productSaga({ type, payload }) {
 
         const { image, imageCollection } = payload.updates;
         let newUpdates = { ...payload.updates };
-
-        if (image.constructor === File && typeof image === 'object') {
+        if (image?.constructor === File && typeof image === 'object') {
           try {
             yield call(firebase.deleteImage, payload.id);
           } catch (e) {
@@ -183,7 +182,6 @@ function* productSaga({ type, payload }) {
           // add image thumbnail to image collection from newUpdates to
           // make sure you're adding the url not the file object.
         }
-
         yield call(firebase.editProduct, payload.id, newUpdates);
         yield put(
           editProductSuccess({

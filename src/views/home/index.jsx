@@ -17,7 +17,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  useDocumentTitle('SpecShop | Home');
+  useDocumentTitle('SpecShoppe | Home');
   useScrollTop();
 
   const {

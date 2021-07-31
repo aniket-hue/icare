@@ -17,7 +17,6 @@ import * as Yup from 'yup';
 const brandOptions = [
   { value: 'Salt Maalat', label: 'Salt Maalat' },
   { value: 'Betsin Maalat', label: 'Betsin Maalat' },
-  { value: 'Sexbomb', label: 'Sexbomb' },
   { value: 'Black Kibal', label: 'Black Kibal' },
 ];
 
@@ -69,7 +68,6 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
     });
 
   const onSubmitForm = (form) => {
-    console.log(product);
     if (imageFile.image.file || product.imageUrl || product.image) {
       onSubmit({
         ...form,
@@ -78,7 +76,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
         // of name here instead in firebase functions
         name_lower: form.name.toLowerCase(),
         dateAdded: new Date().getTime(),
-        image: imageFile?.image?.file || product.imageUrl,
+        image: imageFile?.image?.file || product.image,
         imageCollection: imageFile.imageCollection,
       });
     } else {

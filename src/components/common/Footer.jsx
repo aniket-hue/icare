@@ -10,7 +10,7 @@ const Footer = () => {
   return !visibleOnlyPath.includes(pathname) ? null : (
     <footer className="footer">
       <div className="footer-col-2">
-        <h1>SpecShop</h1>
+        <h1>SpecShoppe</h1>
         <h5>
           &copy;&nbsp;
           {new Date().getFullYear()}

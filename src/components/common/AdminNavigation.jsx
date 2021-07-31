@@ -18,7 +18,7 @@ const AdminNavigation = () => {
           to={ADMIN_DASHBOARD}
           style={{ display: 'flex', alignItems: 'center' }}
         >
-          <h1 style={{ marginRight: 12 }}>SpecShop</h1>
+          <h1 style={{ marginRight: 12 }}>SpecShoppe</h1>
           <h3>ADMIN PANEL</h3>
         </Link>
       </div>

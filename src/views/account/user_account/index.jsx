@@ -17,7 +17,7 @@ const Loader = () => (
 
 const UserAccount = () => {
   useScrollTop();
-  useDocumentTitle('My Account | SpecShop');
+  useDocumentTitle('My Account | SpecShoppe');
 
   return (
     <UserTab>

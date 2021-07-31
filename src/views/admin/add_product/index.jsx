@@ -9,7 +9,7 @@ const ProductForm = lazy(() => import('../components/ProductForm'));
 
 const AddProduct = () => {
   useScrollTop();
-  useDocumentTitle('Add New Product | SpecShop');
+  useDocumentTitle('Add New Product | SpecShoppe');
   const isLoading = useSelector((state) => state.app.loading);
   const dispatch = useDispatch();
 

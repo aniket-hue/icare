@@ -9,7 +9,7 @@ import bannerImg from '../../images/banner-girl-1.png';
 import React from 'react';
 
 const RecommendedProducts = () => {
-  useDocumentTitle('Recommended Products | SpecShop');
+  useDocumentTitle('Recommended Products | SpecShoppe');
   useScrollTop();
 
   const { recommendedProducts, fetchRecommendedProducts, isLoading, error } =

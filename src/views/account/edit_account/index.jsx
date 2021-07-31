@@ -33,7 +33,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const EditProfile = () => {
-  useDocumentTitle('Edit Account | SpecShop');
+  useDocumentTitle('Edit Account | SpecShoppe');
   useScrollTop();
 
   const modal = useModal();
