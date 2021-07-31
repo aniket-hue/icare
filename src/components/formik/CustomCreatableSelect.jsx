@@ -6,9 +6,8 @@ import CreatableSelect from 'react-select/creatable';
 
 const CustomCreatableSelect = (props) => {
   const [field, meta, helpers] = useField(props);
-  const {
-    options, defaultValue, label, placeholder, isMulti, type, iid
-  } = props;
+  const { options, defaultValue, label, placeholder, isMulti, type, iid } =
+    props;
   const { touched, error } = meta;
   const { setValue } = helpers;
 
@@ -35,7 +34,9 @@ const CustomCreatableSelect = (props) => {
       {touched && error ? (
         <span className="label-input label-error">{error}</span>
       ) : (
-        <label className="label-input" htmlFor={field.name}>{label}</label>
+        <label className="label-input" htmlFor={field.name}>
+          {label}
+        </label>
       )}
       <CreatableSelect
         isMulti={isMulti}
@@ -49,15 +50,15 @@ const CustomCreatableSelect = (props) => {
         styles={{
           menu: (provided) => ({
             ...provided,
-            zIndex: 10
+            zIndex: 10,
           }),
           container: (provided) => ({
-            ...provided, marginBottom: '1.2rem'
+            ...provided,
           }),
           control: (provided) => ({
             ...provided,
-            border: touched && error ? '1px solid red' : '1px solid #cacaca'
-          })
+            border: touched && error ? '1px solid red' : '1px solid #cacaca',
+          }),
         }}
       />
     </div>
@@ -69,20 +70,18 @@ CustomCreatableSelect.defaultProps = {
   placeholder: '',
   iid: '',
   options: [],
-  type: 'string'
+  type: 'string',
 };
 
 CustomCreatableSelect.propTypes = {
   options: PropType.arrayOf(PropType.object),
-  defaultValue: PropType.oneOfType([
-    PropType.object,
-    PropType.array
-  ]).isRequired,
+  defaultValue: PropType.oneOfType([PropType.object, PropType.array])
+    .isRequired,
   label: PropType.string.isRequired,
   placeholder: PropType.string,
   isMulti: PropType.bool,
   type: PropType.string,
-  iid: PropType.string
+  iid: PropType.string,
 };
 
 export default CustomCreatableSelect;

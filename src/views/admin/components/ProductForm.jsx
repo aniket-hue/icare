@@ -104,7 +104,10 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                     type="text"
                     label="* Product Name"
                     placeholder="Gago"
-                    style={{ textTransform: 'capitalize' }}
+                    style={{
+                      textTransform: 'capitalize',
+                      backgroundColor: 'white',
+                    }}
                     component={CustomInput}
                   />
                 </div>
@@ -129,6 +132,10 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                   rows={3}
                   label="* Product Description"
                   component={CustomTextarea}
+                  style={{
+                    textTransform: 'capitalize',
+                    backgroundColor: 'white',
+                  }}
                 />
               </div>
               <div className="d-flex">
@@ -140,6 +147,10 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                     type="number"
                     label="* Price"
                     component={CustomInput}
+                    style={{
+                      textTransform: 'capitalize',
+                      backgroundColor: 'white',
+                    }}
                   />
                 </div>
                 &nbsp;
@@ -151,6 +162,10 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                     id="maxQuantity"
                     label="* Max Quantity"
                     component={CustomInput}
+                    style={{
+                      textTransform: 'capitalize',
+                      backgroundColor: 'white',
+                    }}
                   />
                 </div>
               </div>

@@ -1,4 +1,3 @@
-import { Filters } from '../common/index';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -107,18 +106,6 @@ const ProductSearch = () => {
           {filter.recent.length === 0 && (
             <h5 className="text-subtle">No recent searches</h5>
           )}
-        </div>
-        <div className="product-search-filter">
-          <h5 className="margin-0">Choose Filters</h5>
-        </div>
-        <div className="product-search-filter-sub">
-          <Filters
-            dispatch={dispatch}
-            filter={filter}
-            isLoading={isLoading}
-            products={products}
-            productsLength={productsLength}
-          />
         </div>
       </div>
     </div>

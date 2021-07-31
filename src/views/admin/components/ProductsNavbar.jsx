@@ -1,5 +1,5 @@
 import { FilterOutlined, PlusOutlined } from '@ant-design/icons';
-import { FiltersToggle, SearchBar } from '../../../components/common/index';
+import { SearchBar } from '../../../components/common/index';
 import { ADD_PRODUCT } from '../../../constants/routes';
 import PropType from 'prop-types';
 import React from 'react';
@@ -14,22 +14,17 @@ const ProductsNavbar = (props) => {
       <h3 className="product-admin-header-title">
         Products &nbsp; ({`${productsCount} / ${totalProductsCount}`})
       </h3>
-      <SearchBar />
-      &nbsp;
-      <FiltersToggle>
-        <button className="button-muted button-small" type="button">
-          <FilterOutlined />
-          &nbsp;More Filters
+      <div style={{ display: 'flex', gap: 10 }}>
+        <SearchBar />
+        <button
+          className="button button-small"
+          onClick={() => history.push(ADD_PRODUCT)}
+          type="button"
+        >
+          <PlusOutlined />
+          &nbsp; Add New Product
         </button>
-      </FiltersToggle>
-      <button
-        className="button button-small"
-        onClick={() => history.push(ADD_PRODUCT)}
-        type="button"
-      >
-        <PlusOutlined />
-        &nbsp; Add New Product
-      </button>
+      </div>
     </div>
   );
 };
