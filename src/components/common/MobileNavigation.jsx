@@ -63,7 +63,7 @@ const Navigation = (props) => {
           )}
         </ul>
       </div>
-      <div className="mobile-navigation-sec ">
+      <div className="mobile-navigation-sec">
         <SearchBar />
       </div>
     </nav>
